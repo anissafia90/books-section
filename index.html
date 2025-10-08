@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Books - Assurance Publications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom animations and transitions */
+      .book-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .book-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .book-image {
+        transition: transform 0.3s ease;
+      }
+
+      .book-card:hover .book-image {
+        transform: translateY(-6px);
+      }
+
+      .buy-button {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .book-card:hover .buy-button {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Smooth fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .animate-delay-1 {
+        animation-delay: 0.1s;
+        opacity: 0;
+      }
+
+      .animate-delay-2 {
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen py-12 px-4"
+  >
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+          My Books
+        </h1>
+        <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        <p class="text-gray-600 mt-4 text-lg">
+          Discover transformative reads for your spiritual journey
+        </p>
+      </div>
+
+      <!-- Books Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Book 1: Together Forever -->
+        <div
+          class="book-card bg-white rounded-2xl shadow-lg overflow-hidden animate-fade-in"
+        >
+          <div class="relative p-6 pb-4">
+            <!-- Book Cover -->
+            <div class="book-image mb-6 relative">
+              <div
+                class="aspect-[3/4] bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=600&fit=crop"
+                  alt="Together Forever Book Cover"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Book Info -->
+            <div class="space-y-2">
+              <h2 class="text-2xl font-bold text-gray-800">Together Forever</h2>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                15 secrets to lifelong marriage
+              </p>
+            </div>
+          </div>
+
+          <!-- Buy Button (appears on hover) -->
+          <div class="buy-button px-6 pb-6">
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Book 2: The Greatest Debtor to His Love -->
+        <div
+          class="book-card bg-white rounded-2xl shadow-lg overflow-hidden animate-fade-in animate-delay-1"
+        >
+          <div class="relative p-6 pb-4">
+            <!-- Book Cover -->
+            <div class="book-image mb-6 relative">
+              <div
+                class="aspect-[3/4] bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop"
+                  alt="The Greatest Debtor to His Love Book Cover"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Book Info -->
+            <div class="space-y-2">
+              <h2 class="text-2xl font-bold text-gray-800">
+                The Greatest Debtor to His Love
+              </h2>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                A trophy of His grace
+              </p>
+            </div>
+          </div>
+
+          <!-- Buy Button (appears on hover) -->
+          <div class="buy-button px-6 pb-6">
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Book 3: Are You a Kingdom Woman? -->
+        <div
+          class="book-card bg-white rounded-2xl shadow-lg overflow-hidden animate-fade-in animate-delay-2"
+        >
+          <div class="relative p-6 pb-4">
+            <!-- Book Cover -->
+            <div class="book-image mb-6 relative">
+              <div
+                class="aspect-[3/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl overflow-hidden shadow-md"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop"
+                  alt="Are You a Kingdom Woman? Book Cover"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Book Info -->
+            <div class="space-y-2">
+              <h2 class="text-2xl font-bold text-gray-800">
+                Are You a Kingdom Woman?
+              </h2>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Empowering women to fulfill divine purpose
+              </p>
+            </div>
+          </div>
+
+          <!-- Buy Button (appears on hover) -->
+          <div class="buy-button px-6 pb-6">
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
