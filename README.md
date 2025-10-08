@@ -48,9 +48,7 @@ This project demonstrates a responsive "My Books" section featuring three books 
 2. Open it in any modern web browser
 3. Resize browser window to see responsive behavior
 
-### Option 2: Live Demo
 
-[View Live Demo](#) _(Add your deployed link here)_
 
 ## 📱 Responsive Breakpoints
 
